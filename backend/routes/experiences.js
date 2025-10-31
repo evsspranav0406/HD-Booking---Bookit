@@ -6,7 +6,7 @@ const router = express.Router();
 // GET /api/experiences - Get all experiences
 router.get('/', async (req, res) => {
   try {
-    const experiences = await Experience.find();
+    const experiences = await Experience.find().maxTimeMS(10000);
     res.json(experiences);
   } catch (error) {
     res.status(500).json({ message: error.message });
