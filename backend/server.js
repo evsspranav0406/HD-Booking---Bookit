@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use(cors({
-  origin: 'https://hd-booking-bookit-kd9f.vercel.app', // or '*' for all origins
+  origin: 'https://hd-booking-ashy.vercel.app', // or '*' for all origins
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
