@@ -11,7 +11,7 @@ const api = axios.create({
 });
 
 export const experiencesApi = {
-  getAll: () => api.get<Experience[]>('/experiences'),
+  getAll: () => api.get<Experience[]>('api/experiences'),
   getById: (id: string) => api.get<Experience>(`/experiences/${id}`),
 };
 
