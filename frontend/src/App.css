@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* Use your design system colors instead of hard-coded ones */
+    @apply bg-background text-foreground;
+  }
+
+  #root {
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    text-align: left;
+  }
+}
+
+/* Optional logo animation */
+.logo {
+  height: 4rem;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 0.5rem #facc15aa);
+}
