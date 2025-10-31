@@ -12,7 +12,7 @@ const api = axios.create({
 
 export const experiencesApi = {
   getAll: () => api.get<Experience[]>('api/experiences'),
-  getById: (id: string) => api.get<Experience>(`/experiences/${id}`),
+  getById: (id: string) => api.get<Experience>(`api/experiences/${id}`),
 };
 
 export const bookingsApi = {
