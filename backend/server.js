@@ -11,11 +11,15 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB connection
-mongoose.connect(process.env.MONGODB_URI )
+mongoose.connect('mongodb+srv://evsspranav_db_user:admin@cluster.lsoa0yv.mongodb.net/?appName=Cluster ')
 .then(() => console.log('MongoDB connected'))
 .catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
+app.get('/', (req, res) => {
+  res.json({ message: 'Welcome to HD Booking API' });
+});
+
 app.use('/api/experiences', require('./routes/experiences'));
 app.use('/api/bookings', require('./routes/bookings'));
 app.use('/api/promo', require('./routes/promo'));
