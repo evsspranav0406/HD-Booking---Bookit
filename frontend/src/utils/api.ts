@@ -17,12 +17,12 @@ export const experiencesApi = {
 
 export const bookingsApi = {
   create: (booking: Omit<Booking, 'createdAt' | 'status'>) =>
-    api.post<{ message: string; bookingId: string }>('/bookings', booking),
+    api.post<{ message: string; bookingId: string }>('api/bookings', booking),
 };
 
 export const promoApi = {
   validate: (code: string, totalAmount: number) =>
-    api.post<PromoValidation>('/promo/validate', { code, totalAmount }),
+    api.post<PromoValidation>('api/promo/validate', { code, totalAmount }),
 };
 
 export default api;
