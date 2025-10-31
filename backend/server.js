@@ -15,7 +15,7 @@ app.use(express.json());
   try {
     await mongoose.connect('mongodb+srv://evsspranav_db_user:admin@cluster.lsoa0yv.mongodb.net/?appName=Cluster ', {
       bufferCommands: false,
-      serverSelectionTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 100000,
       socketTimeoutMS: 45000,
       family: 4
     });
